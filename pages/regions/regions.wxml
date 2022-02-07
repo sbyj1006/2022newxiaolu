@@ -1,0 +1,25 @@
+<!--pages/regions/regions.wxml-->
+<template name="cascade">
+  <view class='cascade_box' animation="{{animationData}}">
+  
+  <view class='cascade_top'></view>
+  <view class='cascade_find'>
+    <view class='cascade_header'>
+      <text class='cancel' bindtap='cancelRegion'>取消</text>
+      <text class='confirm' bindtap='confirmRegion'>确定</text>
+    </view>
+    <picker-view indicator-style="height: 80rpx;" class='picker' bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{province}}" wx:key="this" class='picker-column'>{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{city}}" wx:key="this" class='picker-column'>{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{area}}" wx:key="this" class='picker-column'>{{item}}</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+
+  </view>
+</template>

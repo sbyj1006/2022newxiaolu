@@ -1,0 +1,8 @@
+{
+
+  "navigationBarTitleText": "申报审核",
+  "usingComponents": {
+    "van-icon": "../../yy/icon/index",
+	"van-popup": "../../yy/popup/index"
+  }
+}

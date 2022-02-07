@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "新增客户申报",
+  "usingComponents": {
+    "van-field": "../../yy/field/index",
+	"van-area": "../../yy/area/index",
+	 "van-uploader": "../../yy/uploader/index",
+	 "van-picker": "../../yy/picker/index",
+	 "van-popup": "../../yy/popup/index",
+	 "van-cell": "../../yy/cell/index",
+	  "van-switch": "../../yy/switch/index",
+	 "van-datetime-picker": "../../yy/datetime-picker/index"
+	 	
+  }
+}

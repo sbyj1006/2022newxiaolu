@@ -1,0 +1,56 @@
+{
+  "pages":[
+    "pages/index/index",
+	"pages/member/index/index",
+	"pages/member/login/login",
+	"pages/member/myinfo/add",
+	"pages/member/mylist/index",
+	"pages/member/mylistsh/index",
+	"pages/member/addnew/add",
+	"pages/member/addzh/add",
+	
+	"pages/ranking/newranking/index",
+	"pages/ranking/teamranking/index",
+	"pages/ranking/zhihangranking/index",
+	
+	"pages/news/lists/index",
+	"pages/news/details/index",
+	
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#1b4b93",
+    "navigationBarTitleText": "泸州银行-账户开立竞赛",
+    "navigationBarTextStyle":"white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于定位你所在位置"
+    }
+  },
+  "tabBar": {
+  	  "custom":true,
+    "selectedColor": "#0FBB70",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_selected.png"
+      },
+
+
+
+      {
+        "pagePath": "pages/member/index/index",
+        "text": "我的",
+        "iconPath": "images/icon_member.png",
+        "selectedIconPath": "images/icon_member_selected.png"
+        
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

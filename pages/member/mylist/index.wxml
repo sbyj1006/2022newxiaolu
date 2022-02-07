@@ -1,0 +1,87 @@
+<!--pages/member/index/index.wxml-->
+<view>
+
+  <view class='userinfo' style="background: url('{{domain}}{{datas.topbanner_user.image}}'); background-size: cover;">
+
+    <!-- 第三季修正 -->
+	<view class="userinfo-left ">
+    <!-- <open-data type="userAvatarUrl" class="userinfo-avatar-new" ></open-data> -->
+	<image class='userinfo-avatar-new' src='../../../images/usertx.jpg' mode="widthFix"></image>
+	</view>
+	<view class="userinfo-right ">
+    <view class="info-li"><image src="../../../images/04-9.png" mode="widthFix"></image> {{userInfo.nickname}}</view>
+	 <view class="info-li"><image src="../../../images/04-10.png" mode="widthFix"></image> {{userInfo.teamname}}</view>
+	  <view class="info-li"><image src="../../../images/04-11.png" mode="widthFix"></image> {{userInfo.zhihangname}}</view>
+	</view>
+    <view class="uservip">
+    <view  wx:for="{{vips}}" wx:key="{{item.id}}" class="vipu" bindtap="Gotourl" data-url="../vips/index" data-vip-id="{{item.id}}">
+      <image src="{{domain}}{{item.image}}" mode="widthFix">
+    </image>
+  </view>
+	
+	</view>
+
+  
+  <view class="userinfo-grzx" data-url="/pages/member/upinfo/add" bindtap='Gotourl'>
+	  <image src="../../../images/gerenzx.png" mode="widthFix"></image> 个人中心
+  </view>
+  
+  
+  </view>
+
+
+
+<view class="user-page user-page-a">
+	
+	<view class="user-k-t"  bindtap="navigateToMoney"><van-icon name="orders-o" /> 我的记录
+	
+	 </view>
+	<view class="user-k">
+
+ <view   class='tableviewcell' bindtap="getdatakh" data-type='1'>
+   <van-icon name="../../../images/xzicon.png" size="56px" color="#0081ff" />
+    <text>新增客户</text>
+  </view>
+
+  <view   class='tableviewcell' bindtap="getdatakh" data-type='2'>
+      <van-icon name="../../../images/dkicon.png" size="56px" color="#fbbd08" />
+    <text>收单转化</text>
+  </view>
+  <view   class='tableviewcell' bindtap="getdatakh" data-type='3'>
+      <van-icon name="../../../images/sdicon.png" size="56px" color="#38cdff" />
+    <text>贷款转化</text>
+  </view>
+	
+	</view>
+	
+	</view>
+
+
+<view class="list-page">
+	
+	<view class="view-item-tit">{{pagename}}</view>
+	
+	
+<view class="mylist">
+	
+	
+    <view class="blocks"  wx:for="{{listdatas}}"  wx:for-index="index" >
+        <view class="left_yjjx">
+           <text>客户号：{{item.client_id}}</text> 	<text style="padding-left: 10px;" wx:if="{{item.client_name}}">{{item.client_name}}</text>
+		   
+        </view>
+		<view class="dels" bindtap="dels" data-id="{{item.id}}">删除</view>
+        <view class="client_type">客户类型：{{item.client_type_name}}
+	
+		</view>
+		<view class="client_type">状态：{{item.zhuangtai}}</view>
+        <view class="time">{{item.newaddtime}}</view>
+    </view>	
+
+
+    
+  </view>
+  
+  </view>
+  
+</view>

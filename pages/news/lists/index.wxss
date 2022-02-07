@@ -1,0 +1,23 @@
+/**index.wxss**/
+page{display: inline-block; width: 100%; font-size: 28rpx; background-image: linear-gradient(45deg,#fff, #f2f2f2);}
+.page-con {
+  display: inline-block;
+  min-height: 80vh;
+  align-items: center; width: 100%; padding: 10px 2%; 
+  color: #aaa; padding-bottom: 120rpx;
+}
+
+.v-li-note{ font-size: 24rpx;}
+.pagetop,.pagetopimg{ border-radius: 0px; overflow: hidden; display: flex;  width: 100%;}
+.pagetop{ padding: px; padding-bottom: 0;}
+.pagetopimg image{ width: 100%;}
+
+.view-r-jt{ width: 25px; height: 25px; border: 1px solid #3698ec; padding: 0; font-weight: bold; text-align: center; display: inline-block;
+ border-radius: 100px;transform:rotate(-90deg); color: #3698ec;}
+.view-r-jt .van-icon{font-weight: bold; display: block;}
+
+.view-item{ display: flex; width: 94%; border-radius: 10px; padding: 10px 15px; margin: 30rpx 3%; box-shadow: 3px 3px 10px rgba(0,0,0,.1);  background-color: rgba(254,254,254,.8);}
+.view-item .view-l{ width: calc(100% - 30px);}
+.view-t{ color: #3698ec; font-size: 28rpx; font-weight: bold; width: 100%;}
+.view-note{ color: #999; font-size: 28rpx; font-weight: 400; width: 100%;}
+.view-item .view-r{ width: 30px; margin-top: 5px;}

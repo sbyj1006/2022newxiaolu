@@ -1,0 +1,57 @@
+<!--index.wxml-->
+<view class="pagetop">
+	<view class="pagetopimg">
+		<image src="{{domain}}{{datas.topbanner_news.image}}" mode="widthFix"></image>
+	</view>
+</view>
+<view class="container" style="background: #a8ddef">
+
+
+<view class="page-con">
+
+<!--  -->
+	<view class="view-item" wx:for="{{newslist}}"  data-id="{{item.id}}" bindtap="showxx">
+		
+<view class="view-l">
+	
+	<view class="view-t">{{item.title}}</view>
+	<view class="view-note">{{item.titles}}</view>
+	
+</view>
+
+<view class="view-r">
+	<view class="view-r-jt">
+		<van-icon name="down" size="12px" />
+		</view>
+	</view>
+
+	
+</view>
+
+<!--  -->
+
+
+	
+	</view>
+
+</view>
+
+<view class="tab-bar">
+  <view class="tab-bar-border"></view>
+  <view class="tab-bar-item"  data-path="/pages/index/index" data-index="0" bindtap="switchTab">
+    <image  src="../../../images/icon_home.png" class=""></image>
+    <view style="">首页</view>
+  </view>
+  <view class="tab-bar-item active"  data-path="/pages/ranking/newranking/index" data-index="1" bindtap="switchTab">
+    <image src="../../../images/ranking.png" class=""></image>
+    <view style="">排行榜</view>
+  </view>
+  <view  class="tab-bar-item"  data-path="/pages/news/lists/index" data-index="2" bindtap="switchTab">
+    <image src="../../../images/icon_news_sel.png" class=""></image>
+    <view style="">公享资讯</view>
+  </view>
+  <view  class="tab-bar-item"  data-path="/pages/member/index/index" data-index="3" bindtap="switchTab">
+    <image src="../../../images/icon_member.png" class=""></image>
+    <view style="">我的</view>
+  </view>
+</view>

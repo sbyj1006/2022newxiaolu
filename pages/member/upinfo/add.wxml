@@ -1,0 +1,87 @@
+<!--pages/myform/freesj/add.wxml-->
+
+
+
+<view class='parent'>
+<view class="formtita">
+	
+	个人资料
+	
+</view>
+
+<van-cell-group>
+  <van-field  
+  label="姓名" class='bor-bot'
+    model:value="{{ userInfo.nickname }}"
+    placeholder="请输入姓名" disabled
+    border="{{ false }}" size="12px"
+  />
+</van-cell-group>
+
+
+<van-cell-group>
+  <van-field  
+  label="工号" class='bor-bot'
+    model:value="{{ userInfo.jobnumber }}" disabled
+    placeholder="工号前+G,如G01234"
+    border="{{ false }}" 
+  />
+</van-cell-group>
+
+<van-cell-group>
+  <van-field  
+  label="电话" class='bor-bot'
+    model:value="{{ userInfo.mobile }}"
+    placeholder="请输入电话"
+    border="{{ false }}"   bind:change="onChangef" 
+  />
+</van-cell-group>
+
+
+<view class="view-rowb">
+<van-cell title="选择机构" is-link bind:click="showPopup" />
+<view class="teat-plac" bindtap="showPopup">{{userInfo.zhihangname}}</view>
+</view>
+<van-popup show="{{ show }}" bind:close="onClose"  round
+  position="bottom"
+  custom-style="height: 40%">
+	
+	<van-picker columns="{{ zhihangdatas }}"  bind:change="onChange"  show-toolbar
+	  title="选择机构"  bind:cancel="onCancel"
+	  bind:confirm="onConfirm" />
+	
+</van-popup>
+
+<view class="kaiguan-view">
+	<label class="fieldlabel">是否参赛人员</label>
+<van-switch checked="{{ checkeda }}" bind:change="onChangea" size="18px" />
+</view>
+<view class="{{iscsclass}}">
+	
+	<view class="view-rowb">
+<van-cell title="选择参赛团队" is-link bind:click="showPopupt" />
+<view class="teat-plac" bindtap="showPopupt">{{userInfo.teamname}}</view>
+</view>
+<van-popup show="{{ showt }}" bind:close="onCloset"  round
+  position="bottom"
+  custom-style="height: 40%">
+	
+	<van-picker columns="{{ teamdata }}"  bind:change="onChanget"  show-toolbar
+	  title="参赛团队"  bind:cancel="onCancel"
+	  bind:confirm="onConfirmt" />
+	
+</van-popup>
+
+
+<view class="kaiguan-view">
+	<label class="fieldlabel">是否自愿参赛人员</label>
+<van-switch checked="{{ checkedb }}" bind:change="onChangeb" size="18px" />
+</view>
+
+
+</view>
+  <import src="../../regions/regions.wxml" />
+  <template is="cascade" data="{{animationData:animationData, province:province, city:city, area:area}}" />
+<view class="mybtn" bindtap='submit' > 立即提交 </view>
+
+</view>

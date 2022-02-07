@@ -1,0 +1,33 @@
+/**index.wxss**/
+page{display: inline-block; width: 100%; font-size: 28rpx; background-image: linear-gradient(45deg,#fff, #fff0e8);}
+.page-con {
+  display: inline-block;
+  
+  align-items: center; width: 100%; padding: 10px 2%; 
+  color: #aaa; padding-bottom: 120rpx;
+}
+.view-li{ display: flex; padding: 20px 10px; background-color: #f2f2f2; text-align: center;
+ border-radius: 4px; height: 90px;   width:46%; margin: 0px 2%; margin-bottom: 16px; float: left;}
+.v-li-img,.v-li-jt{width: 30%;}
+.v-li-text{width: 70%; color: #fff; margin-top: 5px;}
+.v-li-img image,.v-li-jt image{ width: 30px; margin-top: 10px;}
+.view-item{display: inline-block; width: 100%; text-align: center;}
+.page-con .view-item-tit{  background-image: linear-gradient(45deg,#0d5eab, #08acfe); box-shadow: 2px 2px 5px #fff; display: inline-block; padding: 6px 40px; letter-spacing: 2px; border-radius: 100px; margin: 15px auto; font-weight: bold; color: #fff;}
+.view-item-con{ display: inline-block; width: 94%; margin: 10rpx 3%; background-color: rgba(254,254,254,.4); border-radius: 10px; padding: 10px;}
+.item-con-t,.item-con-li{display: flex; color: #fff; line-height: 22px; margin: 6rpx 0; justify-content: center; text-align: center;}
+.item-dz{display: flex; color: #fff;  justify-content: center; text-align: center;}
+.teams{ display: flex; vertical-align: middle; justify-content: center; font-size: 24rpx;}
+.item-dz image,.names image{width: 16px; height: 16px; margin: 2px; margin-top: 2px; border-radius: 100px; border: 1px solid #f2f2f2;}
+.item-con-t .names,.item-con-li .names{ position: relative; width: 25%; text-align: left; padding-left: 18px;}
+.names image{ position: absolute; left: -5px;}
+.item-con-t{ margin: 6rpx 0; margin-bottom: 10rpx;}
+.item-con-t view,.item-con-li view{  width: 18%; text-align: center; font-size: 28rpx; }
+.item-con-t .teams,.item-con-li .teams{ font-size: 24rpx; }
+.item-con-t view.w10,.item-con-li view.w10{width: 10%;}
+.item-con-t view.w30,.item-con-li view.w30{width: 33%;}
+.news-star{position: absolute; top: 0px; left: 2px;}
+.good-job{position: absolute;top: 2px; left: 73%;}
+.v-li-note{ font-size: 24rpx;}
+.pagetop,.pagetopimg{ border-radius: 0px; overflow: hidden; display: flex;  width: 100%;}
+.pagetop{ padding: px; padding-bottom: 0;}
+.pagetopimg image{ width: 100%;}

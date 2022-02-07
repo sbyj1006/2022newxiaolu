@@ -1,0 +1,13 @@
+<!--pages/member/login/login.wxml-->
+<view class='container'>
+  <view class='wechatapp'>
+    <view class='header'>
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <open-data type="userNickName" class='userinfo-nickname'></open-data>
+  </view>
+
+  <view class='auth-title'>申请获取以下权限</view>
+  <view class='auth-subtitle'>获得您的公开信息（昵称、头像）</view>
+  <button open-type="getUserInfo"  bindtap="getUserProfile" class='login-btn'>授权登录</button>
+</view>

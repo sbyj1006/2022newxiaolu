@@ -1,0 +1,94 @@
+<!--pages/member/index/index.wxml-->
+<view>
+
+  <view class='userinfo' style="background: url('{{domain}}{{datas.topbanner_user.image}}'); background-size: cover;">
+
+    <!-- 第三季修正 -->
+	<view class="userinfo-left ">
+    <open-data type="userAvatarUrl" class="userinfo-avatar-new" ></open-data>
+	<!-- <image class='userinfo-avatar-new' src='../../../images/usertx.jpg' mode="widthFix"></image> -->
+	</view>
+	<view class="userinfo-right ">
+    <view class="info-li"><image src="../../../images/04-9.png" mode="widthFix"></image> {{userInfo.nickname}}</view>
+	
+
+	 <view class="info-li"   wx:if="{{userInfo.iscs == 2}}"><image src="../../../images/04-10.png"  mode="widthFix"></image> {{userInfo.teamname}}</view>
+	 	 <view class="info-li"  wx:else ><image src="../../../images/04-10.png" mode="widthFix"></image> 非参赛人员</view>
+		 
+	<view class="info-li"  wx:if="{{userInfo.iscs == 2}}"><image src="../../../images/04-11.png" mode="widthFix"></image> {{userInfo.zhihangname}}</view>
+		<view class="info-li" wx:else ><image src="../../../images/04-11.png" mode="widthFix"></image> {{userInfo.bumenjg}}</view>
+			
+	</view>
+    <view class="uservip">
+    <view  wx:for="{{vips}}" wx:key="{{item.id}}" class="vipu" bindtap="Gotourl" data-url="../vips/index" data-vip-id="{{item.id}}">
+      <image src="{{domain}}{{item.image}}" mode="widthFix">
+    </image>
+  </view>
+	
+	</view>
+
+  
+  <view class="userinfo-grzx" data-url="/pages/member/upinfo/add" bindtap='Gotourl'>
+	  <image src="../../../images/gerenzx.png" mode="widthFix"></image> 个人中心
+  </view>
+
+
+  </view>
+
+
+
+<view class="user-page user-page-a">
+	
+	<view class="user-k-t"  bindtap="navigateToMoney"><van-icon name="orders-o" /> 我的记录
+	
+	 </view>
+	<view class="user-k">
+
+ <view bindtap='Gotourla' data-url="/pages/member/mylist/index" data-type='1' class='tableviewcell'>
+   <van-icon name="../../../images/xzicon.png" size="56px" color="#0081ff" />
+    <text>新增客户</text>
+  </view>
+
+  <view  bindtap='Gotourla' data-url="/pages/member/mylist/index" data-type='2' class='tableviewcell'>
+      <van-icon name="../../../images/dkicon.png" size="56px" color="#fbbd08" />
+    <text>收单转化</text>
+  </view>
+  <view  bindtap='Gotourla' data-url="/pages/member/mylist/index" data-type='3' class='tableviewcell'>
+      <van-icon name="../../../images/sdicon.png" size="56px" color="#38cdff" />
+    <text>贷款转化</text>
+  </view>
+	
+	</view>
+	
+	</view>
+
+
+<view class="user-page">
+
+	<view class="user-k-li"  bindtap='Gotourlsb' data-url="/pages/member/addnew/add" >
+		<view class="li-left">
+		<van-icon name="../../../images/liicon.png" size="18px" /> 新增客户申报
+		</view>
+	 <view class="tixian"> <van-icon name="arrow" color="#b2deea" /> </view>
+	 </view>
+  <view class="user-k-li"  bindtap='Gotourlsb' data-url="/pages/member/addzh/add" >
+  	<view class="li-left">
+  	<van-icon name="../../../images/liicon.png" size="18px" /> 新增客户转化申报
+  	</view>
+   <view class="tixian"> <van-icon name="arrow" color="#b2deea" /> </view>
+   </view>
+   
+   
+   <view class="user-k-li" wx:if="{{userInfo.sh_type==3}}" bindtap='Gotourl'  data-url="/pages/member/mylistsh/index"  >
+   	<view class="li-left">
+   	<van-icon name="../../../images/liicon.png" size="18px" /> 申报审核
+   	</view>
+    <view class="tixian"> <van-icon name="arrow" color="#b2deea" /> </view>
+    </view>
+   
+    
+  </view>
+  
+  
+  
+</view>

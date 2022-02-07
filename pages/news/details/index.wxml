@@ -1,0 +1,96 @@
+<!--index.wxml-->
+<import src="/wxParse/wxParse.wxml"/>
+
+<view class="pagetop">
+	<view class="pagetopimg">
+		<image src="{{domain}}{{datas.topbanner_news.image}}" mode="widthFix"></image>
+	</view>
+</view>
+<view class="container" style="background: #a8ddef">
+
+
+		<view class="main-page">
+			<view class="page-con">
+			<view class="sh-tit">
+			            <view class="cna">{{newsxx.title}}</view>
+						
+			            <view class="cnb">{{newsxx.titles}}</view>
+						
+						 <view class="newtime">{{newsxx.addtime}}</view>
+			        </view>
+				
+			<view class="cpage">
+		
+			 <template is="wxParse" data="{{wxParseData:articlea.nodes}}"/>
+			 		
+			</view>
+			<view class="item-dz">
+			<image src="{{dianzhan.avatarUrl}}" wx:for="{{newsxx.dianzan}}" wx:for-item="dianzhan" mode="widthFix"></image>
+						
+					</view>
+			</view>
+			<view class="liuyanpage">
+				
+				<view class="liuyanlist"  wx:for="{{newsxx.liuyanlist}}" >
+					<view class="liuyanname"><text class="name">{{item.nickname}}</text><text class="time"> </text></view>
+					<view class="liuyancon">{{item.mescontent}}</view>
+				</view>
+				
+				
+			</view>
+			<view class="liuyan-a  {{liuyanclass}}">
+				
+				<textarea class="liuycon"  bindinput="onChangeinputa"  data-name="mescontent" value="{{mescontent}}" placeholder="请输入你的留言">
+					
+				</textarea>
+				
+				<view class="lybtn" bindtap="addliuyan">提交留言</view>
+				
+			</view>
+			
+			<view class="pagefoot">
+				
+				<view class="zan"  bindtap="dianzan" data-id="{{newsxx.id}}" data-types="4"> <van-icon name="good-job" /> 赞({{newsxx.dianzannum}}) </view>
+				
+				<view class="liuyan"  bindtap="liuyan"> 留言 </view>
+				
+			</view>
+			
+	
+			<scroll-view scroll-into-view="{{toView}}" scroll-y="true" scroll-with-animation="true">
+			<view class="liuyanpage" id="liuyan">
+				
+				<view class="liuyanlist"  wx:for="{{liuyanlist}}" >
+					<view class="liuyanname"><text class="name">{{item.name}}</text><text class="time"> </text></view>
+					<view class="liuyancon">{{item.mescontent}}</view>
+				</view>
+				
+				
+			</view>
+			</scroll-view>
+			
+			
+		</view>
+
+
+</view>
+
+<view class="tab-bar">
+  <view class="tab-bar-border"></view>
+  <view class="tab-bar-item"  data-path="/pages/index/index" data-index="0" bindtap="switchTab">
+    <image  src="../../../images/icon_home.png" class=""></image>
+    <view style="">首页</view>
+  </view>
+  <view class="tab-bar-item active"  data-path="/pages/ranking/newranking/index" data-index="1" bindtap="switchTab">
+    <image src="../../../images/ranking.png" class=""></image>
+    <view style="">排行榜</view>
+  </view>
+  <view  class="tab-bar-item"  data-path="/pages/news/lists/index" data-index="2" bindtap="switchTab">
+    <image src="../../../images/icon_news.png" class=""></image>
+    <view style="">公享资讯</view>
+  </view>
+  <view  class="tab-bar-item"  data-path="/pages/member/index/index" data-index="3" bindtap="switchTab">
+    <image src="../../../images/icon_member.png" class=""></image>
+    <view style="">我的</view>
+  </view>
+</view>

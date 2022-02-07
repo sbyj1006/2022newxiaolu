@@ -1,0 +1,51 @@
+/* pages/regions/regions.wxss */
+.cascade_box{
+    font-size:28rpx;
+    width: 100%;
+    height: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.cascade_top{
+    width: 100%;
+    height:732rpx;
+    background: #000;
+    opacity: 0.3;
+}
+.cascade_find{
+    width: 100%;
+    height: 500rpx;
+    position: relative;
+    /*bottom: 0;
+    left: 0;*/
+    background: #fff;
+}
+
+.cancel,.confirm{
+    display: block;
+    position: absolute;
+    width: 100rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    color: #999;
+    font-size: 15px;
+}
+.confirm{
+    right: 0;
+    top: 0;
+}
+.cascade_header{
+    height: 80rpx;
+    width: 100%;
+    margin-bottom: 20rpx;
+}
+.picker{
+  width: 100%; 
+  height: 400rpx;
+}
+.picker-column{
+  line-height: 80rpx;
+  text-align:center;
+}

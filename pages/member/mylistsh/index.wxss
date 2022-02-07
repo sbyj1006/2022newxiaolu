@@ -1,0 +1,168 @@
+/* pages/member/index/index.wxss */
+page {
+  background: #a8ddef;
+}
+
+.userinfo { padding-top: 20px;
+  display: flex; position: relative;
+   
+  align-items: center;
+  height: 400rpx;
+  background:url('') #0FBB70;
+
+      background:   #0FBB70;
+      background-size: cover; border-bottom: 8px solid #f5df73;
+}
+
+.userinfo .uservip{ position: absolute; bottom: 0; width: 94%; margin:0 auto;   
+ /* background-color: #333; 
+     background-image: linear-gradient(to right, #333 , #786658); height: 60px; */
+	border-radius: 16rpx 16rpx 0 0; display: flex; flex-direction: row; }
+	.uservip .vipu{display: flex; width: 31%; margin: 0 1%; color: #dad4b3;  padding-top: 15px;}
+	.vipu image {width: 100%;  display: inline-block; border-radius: 16rpx 16rpx 0 0;}
+	.vipu.vipub{ font-size: 32rpx; display: flex; font-weight: bold; width: 45%; padding: 20rpx; padding-top: 15px;}
+		.vipu.vipuc{ width: 25%; display: flex; padding-top: 15px;}
+.vipu.vipuc text{ display: inline-block; padding: 6rpx 20rpx; height: 26px; background-color: #f3d99f; /* 不支持线性的时候显示 */
+    background-image: linear-gradient(to right, #f4eccc , #f3d99f);  color: #fff; border-radius: 200rpx;}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 35rpx;
+  border-radius: 50%;
+}
+
+.userinfo-avatar-new {
+  width: 128rpx; 
+  height: 128rpx;
+  
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+}
+.userinfo-left{ margin-left: 5%; margin-top: -5%; border: 1px solid #fff; padding: 6px;  border-radius: 50%;
+ }
+ .userinfo-right{ width: calc(92% - 150rpx); display: flex; flex-direction: column; padding-left: 20rpx; margin-top: -5%;}
+ 
+.userinfo-nickname {
+  color: #fff;
+}
+.info-li{ display: flex; color: #fff; font-size: 28rpx; margin-bottom: 10rpx;}
+.info-li image{ width: 22px; margin-right: 12rpx; }
+.userinfo-grzx{position: absolute; display: flex; align-items: center; right: 20px; top: 10px; color: #fff; font-size: 24rpx;} 
+.userinfo-grzx image{ width: 22px; margin: 8rpx;}
+.user-page{ width: 94%; margin: 20rpx 3%; display: inline-block; 
+  border-radius: 12rpx;  padding: 20rpx;}
+.user-page-a{ margin-top: -40px; position: relative; z-index: 5; }
+.user-page .tableviewcell:nth-child(3n+3){ border-right: 0;}
+
+.tableviewcell {
+  padding: 20rpx 10rpx;
+  border-right: 0px solid #f2f2f2;
+  color: #666; width: 33.3%; height: 140rpx;
+  /* background: white; */
+  display: inline-block; text-align: center;
+  align-items: center;
+}
+
+.tableviewcell image {
+
+ clear: both; display: inline-block; margin: 0rpx auto;
+}
+
+.tableviewcell text {
+  font-size: 14px; width: 100%; display: inline-block; color: #fff;
+
+}
+
+.user-k-t{ font-size: 28rpx; font-weight: bold; display: flex; width: 100%; color: #0081ff; box-shadow: 3px 3px 10px rgba(0,0,0,.05);
+ padding: 30rpx; background-color: #fff; border-radius: 10px;}
+.user-k-t .tixian{ float: right; display: inline-block; color: #0081ff;}
+.user-k{ display: inline-block; width: 100%; padding: 16rpx; color: #2a86e8;}
+.user-k-li{ display: flex; width:100%; font-size: 28rpx; 
+  box-shadow: 3px 3px 10px rgba(0,0,0,.05);  background-color: #fff; border-radius: 10px; padding:30rpx; color: #2d2d2d;}
+.user-k-li text:nth-child(2){color: #999;}
+.user-k-li text.texts{ display: inline-block;  float: right; width: 50%;  border-radius: 100px;
+ text-align: right; font-size: 24rpx; line-height: 25px;}
+ text.texts view{text-align: center; background: #0081ff; color: #fff; padding: 6px 16px;}
+ .li-left{ width: calc(100% - 40px); color: #0081ff; display: flex; font-weight: bold;}
+ .li-left .van-icon{ margin-right: 5px;}
+.logout {
+  margin: 30rpx;
+}
+.userimg{display: flex; line-height: 25px; width: 40%; font-size: 12px; float: left; }
+.userimg image{ width: 50rpx; display: inline-block;}
+.order-area {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  margin: 20rpx 0;
+  padding: 20rpx 0;
+}
+.list-page{ display: flex; flex-direction: column; padding: 20rpx; justify-content: center;}
+.view-item-tit{  background-image: linear-gradient(45deg,#69e6ff, #2a86e8); display: inline-block; padding: 6px 40px; letter-spacing: 2px; border-radius: 100px; margin: 15px auto; font-weight: bold; color: #fff;}
+
+.mylist{
+    display: flex;
+    flex-direction: column;
+}
+.blocks{ box-shadow: 3px 3px 10px rgba(0,0,0,.05);
+ padding: 20px; padding-left: 0; padding-top: 0; padding-bottom: 40px;
+background-color: #ffffff;
+margin: 20rpx;
+border-radius: 20rpx;
+position: relative;
+}
+.left_yjjx{
+   
+    height: 60rpx;
+    background-color: #38cdff;
+    border-top-left-radius: 20rpx;
+    border-top-right-radius: 0rpx;
+    border-bottom-right-radius: 20rpx;
+    display: inline-block;
+ padding: 0 20px; line-height: 60rpx;   justify-content: center;
+    align-items: center;
+    font-size: 28rpx;
+    color: rgba(255, 255, 255, 0.822);
+}
+.client_type{
+font-size: 28rpx;
+color: #38cdff;
+margin: 16rpx 0 0 20rpx;
+
+}
+.time{
+    position: absolute; 
+    right: 21rpx;
+    top: 21rpx;
+    font-size: 24rpx;
+    color: #ccc;
+}
+.shenhei{color: #fff; font-size: 28rpx; position: absolute; right: 0px; bottom: 0px;
+    height: 50rpx;
+    background-color: #38cdff;   background-image: linear-gradient(45deg,#69e6ff, #2a86e8);
+    border-top-left-radius: 20rpx;
+    border-top-right-radius: 00rpx;
+    border-bottom-right-radius: 0rpx;
+	border-bottom-left-radius: 0rpx;
+    display: inline-block;
+ padding: 0 10px; line-height: 50rpx;   justify-content: center;
+    align-items: center;
+    font-size: 28rpx;
+    color: rgba(255, 255, 255, 0.822);
+}
+.shenheib{color: #fff; font-size: 28rpx; position: absolute; left: 0px; bottom: 0px;
+    height: 50rpx;
+    background-color: #f8d66d;   background-image: linear-gradient(45deg,#f8d66d, #fabd03);
+    border-top-left-radius: 0rpx;
+    border-top-right-radius: 20rpx;
+    border-bottom-right-radius: 0rpx;
+	border-bottom-left-radius: 0rpx;
+    display: inline-block;
+ padding: 0 10px; line-height: 50rpx;   justify-content: center;
+    align-items: center;
+    font-size: 28rpx;
+    color: rgba(255, 255, 255, 0.822);
+}

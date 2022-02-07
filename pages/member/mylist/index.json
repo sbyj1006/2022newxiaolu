@@ -1,0 +1,8 @@
+{
+
+  "navigationBarTitleText": "我的",
+  "usingComponents": {
+    "van-icon": "../../yy/icon/index",
+	"van-popup": "../../yy/popup/index"
+  }
+}

@@ -1,0 +1,168 @@
+/* pages/address/add/add.wxss */
+@import '../../regions/regions.wxss';
+
+page {
+  position: relative;
+  height: 100%;
+}
+.page-ban{ display: inline-block; width: 100%;}
+.page-ban image{ height: 400rpx; width: 100%;}
+.parent { 
+  display: flex; margin-top: 0px;
+  flex-direction: column;
+  width: 100%;  border-radius: 15px 15px 0 0 ; background: #fff; padding: 0; color: #fff;
+}
+.van-field__label,.van-cell__title,.van-field__input,.van-picker-column__item--selected{ font-size: 28rpx;}
+.kaiguan-view{display: flex; padding: 10px 16px; }
+.fieldlabel{font-size: 28rpx; display: flex;  width: 110px;   color: #646566;
+    color: var(--field-label-color,#646566); padding-right: 10px;}
+.view-row {
+  display: flex;
+  flex-direction: row;
+   
+  height: 80rpx;
+  margin: 0 25rpx;
+  align-items: center;
+}
+.view-rowb{ height: auto; position: relative;}
+.view-row text {
+  font-size: 32rpx;
+  color: #666; padding-left: 12rpx;
+  margin-left: 0rpx;
+  width: 230rpx;
+}
+.textareamy{ background: #f8f8f8; padding: 10px; display: inline-block; border-radius: 6px; height: 120px; width: 100%; }
+.teat-plac{ color: #999;   white-space:pre-wrap; top: 10px; display: inline-block; right: 40px;  position: absolute;}
+.view-row input {
+  font-size: 30rpx;
+  color: #666;
+}
+.place-holder{ color: #999;}
+.input-placeholder {
+  color: gray;
+  margin-left: 0rpx;
+  width: 400rpx;
+}
+
+.text-save {
+  width: 680rpx;
+  align-self: center;
+  font-size: 32rpx;
+  margin-top: 30rpx;
+  color: #fff;
+  text-align: center;
+  height: 70rpx;
+  border-radius: 9rpx;
+  background: #3aa0b7;
+  line-height: 70rpx;
+}
+
+.class-line {
+  width: 100%;
+  height: 2rpx;
+  background: #f4f4f4;
+}
+.mybtn {
+    display: inline-block;
+    padding: 16px 20px;
+    margin:10px;
+    color: #fff;
+    font-size: 28rpx;
+    font-weight: bold;
+    float: right; text-align: center; line-height: 30rpx;
+    border-radius: 100px;
+    background-image: linear-gradient(45deg,#69e6ff, #2a86e8);
+    background-size: cover;
+}
+
+.map_container {
+  height: 260px;
+  width: 100%;
+}
+ 
+.map {
+  height: 100%;
+  width: 100%;
+}
+ 
+ 
+ .cascade_box {z-index: 99;}
+ 
+.list-guide{
+  display: flex;  
+  flex-direction: row; 
+  justify-content:space-around;
+  border-top: 1px solid #ededed;
+  height: 80rpx;
+}
+.list-guide-imgae{
+  height: 70rpx;
+  width: 70rpx;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+.list-guide-text{
+  vertical-align: middle;
+  line-height: 90rpx;
+  font-size: 35rpx;
+}
+.van-overlay{    background-color: rgba(0,0,0,.4);
+    background-color: var(--overlay-background-color,rgba(0,0,0,.4));}
+	.iscsclass{display: none;}
+	
+.page-top-tab{ display: flex; padding: 5px 0; border-bottom: 1px solid #f5f5f5; box-shadow: 3px 3px 10px #ddd; text-align: center;}
+.page-top-tab view{ width: 50%; line-height: 40px; position: relative;}
+.page-top-tab view::after{content: ''; height: 20px; width: 1px; display: inline-block; position: absolute;
+  top: 10px; right: 0; background-color: #f5f5f5; }
+.page-top-tab view:last-child::after{display: none;}
+.page-top-tab view.active{color: #0081ff;}
+.page-top-tab view.active::before{content: ''; height: 3px; width: 100%; display: inline-block; position: absolute;
+  bottom: -5px; left:0%;  background-color: #0081ff; }
+.formtita{display: inline-block; width: 100%; padding: 10px;   background-image: linear-gradient(45deg,#2a86e8, #69e6ff);}
+.bor-bot{border-bottom: 1px solid #f2f2f2; display: inline-block; width: 100%;  }
+
+.textareamy{margin-top: 10px;}
+.pj-view-page{display: inline-block; width: 100%; padding: 10px;}
+.pj-li-tit{ display: flex; line-height: 50px; width: 100%; border-bottom: 1px solid #f2f2f2;}
+.pj-li-tit view{ width: 50%; text-align: center;}
+.pj-li-tit view:first-child{ text-align: left; padding-left: 20px;}
+.pj-li-tit view:last-child{ text-align: right; padding-right: 20px;}
+.pj-li-con{ display: inline-block; width: 100%;  padding: 5px 0;}
+.pj-view{ display: flex; line-height: 40px; width: 100%; float: left; border-bottom: 1px dotted #f2f2f2;}
+.pj-view view{ width: 50%; text-align: center;}
+.pj-view view:first-child{ text-align: left; font-size: 12px; color: #646566; padding-left: 20px;}
+.pj-view view:last-child{ text-align: right; padding-right: 20px;}
+.pjtit{display: flex;}
+.pjtit image{ width: 22px; margin-right: 5px; margin-top: 10px;}
+
+/*checkbox 整体大小  */
+checkbox {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+/*checkbox 选项框大小  */
+checkbox .wx-checkbox-input { border: 1px solid #0081ff;
+  width: 34rpx; border-radius: 100px;
+  height: 34rpx;
+}
+/*checkbox选中后样式  */
+checkbox .wx-checkbox-input.wx-checkbox-label-checked {
+	color: #0081ff;
+	}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: linear-gradient(45deg,#0081ff, #0081ff);
+}
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+.bgf5{ background: #f5f5f5;}

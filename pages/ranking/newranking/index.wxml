@@ -1,0 +1,170 @@
+<!--index.wxml-->
+<view class="pagetop">
+	<view class="pagetopimg">
+		<image src="{{domain}}{{datas.topbanner_ph.image}}" mode="widthFix"></image>
+	</view>
+</view>
+<view class="container" style="background:#a8ddef; ">
+
+
+<view class="page-con">
+
+
+	<view class="view-item-con item-con-a">
+		
+		<view class="item-con-r-t">
+		<view class="view-item-tit  {{activea}}" bindtap="gotodata" data-orders="allOrderNumber">新增排行榜</view>
+		<view class="view-item-tit {{activeb}}" bindtap="gotodata" data-orders="shoudanOrderNumber">收单排行榜</view>
+		<view class="view-item-tit {{activec}}" bindtap="gotodata" data-orders="daikuanOrderNumber">贷款排行榜</view>
+		</view>
+		
+
+<view class="item-con-r-tb">
+<view class="con-r-tb-l active" bindtap="ggurlb" data-actionUrl="../newranking/index">
+	<image src="../../../images/phicon1_sel.png" mode="widthFix"></image>
+	<text class="tit ">个人</text>
+		<text class="note"></text>
+</view>
+	<view class="con-r-tb-l" bindtap="ggurlb" data-actionUrl="../teamranking/index">
+		<image src="../../../images/phicon2.png" mode="widthFix"></image>
+		<text class="tit">参赛团队</text>
+		<!-- <text class="note">（二级支行营销科）</text> -->
+	</view>
+	<view class="con-r-tb-l" bindtap="ggurlb" data-actionUrl="../zhihangranking/index">
+		<image src="../../../images/phicon3.png" mode="widthFix"></image>
+		<text class="tit">一级支行</text>
+			<text class="note"></text>
+	</view>
+	</view>
+		
+
+	
+</view>
+<!--  -->
+<view class="view-item ">
+
+	<view class="view-item-con item-tm"  wx:if="{{allOrderNumber}}" >
+		<view class="page-note">当前合计开户数 {{pmdata.totalsa}} 注：<van-icon name="star" size="14px" color="#ffd400" /> 为自愿参赛人员</view>
+		<view class="item-con">
+		<view class="item-con-t">
+			<view class="w10">排名</view>
+			<view>姓名</view>
+			<view>开户数</view>
+			<view class="w35">参赛队伍</view>
+			<!-- <view class="item-dz"><van-icon name="good-job"  color="#2d8ae9" /></view> -->
+		</view>
+		
+		<view class="item-con-li" wx:for="{{pmdata.allOrderNumber}}"  bindtap='dianzan' data-id="{{item.id}}"  data-types="1" wx:for-index="index">
+			<view class="w10">{{index+1}}</view>
+			<view class="names"><image src="{{item.avatar}}" mode="widthFix"></image>{{item.nickname}}
+			<van-icon name="star" color="#ffd400" wx:if="{{item.isziyuan == 2}}" class="news-star" />
+			<van-icon name="good-job"  color="#2d8ae9" font-size="12px" class="good-job" />
+			</view>
+			<view>{{item.allOrderNumber}}户</view>
+			<view class="w35">{{item.teamname}}</view>
+			
+		</view>
+
+		
+		</view>
+		
+		
+		
+	</view>
+	
+	
+	
+	
+	<view class="view-item-con item-tm" wx:if="{{shoudanOrderNumber}}" >
+		<view class="page-note">当前合计开户数 {{pmdata.totalsb}} 注：<van-icon name="star" size="14px" color="#ffd400" /> 为自愿参赛人员</view>
+		<view class="item-con">
+		<view class="item-con-t">
+			<view class="w10">排名</view>
+			<view>姓名</view>
+			<view>开户数</view>
+			<view class="w35">参赛队伍</view>
+			<!-- <view class="item-dz"><van-icon name="good-job"  color="#2d8ae9" /></view> -->
+		</view>
+
+		
+		<view class="item-con-li" wx:for="{{pmdata.shoudanOrderNumber}}"   bindtap='dianzan' data-id="{{item.id}}"  data-types="2"  wx:for-index="index">
+			<view class="w10">{{index+1}}</view>
+			<view class="names"><image src="{{item.avatar}}" mode="widthFix"></image>{{item.nickname}}
+			<van-icon name="star" color="#ffd400" wx:if="{{item.isziyuan == 2}}" class="news-star" />
+			<van-icon name="good-job"  color="#2d8ae9" font-size="12px" class="good-job" />
+			</view>
+			<view>{{item.shoudanOrderNumber}}户</view>
+			<view class="w35">{{item.teamname}}</view>
+			
+		</view>
+	
+
+		</view>
+		
+		
+		
+	</view>
+	
+	
+	
+	<view class="view-item-con item-tm"  wx:if="{{daikuanOrderNumber}}" >
+		<view class="page-note">当前合计开户数 {{pmdata.totalsc}} 注：<van-icon name="star" size="14px" color="#ffd400" /> 为自愿参赛人员</view>
+		<view class="item-con">
+		<view class="item-con-t">
+			<view class="w10">排名</view>
+			<view>姓名</view>
+			<view>开户数</view>
+			<view class="w30">参赛队伍</view>
+			<!-- <view class="item-dz"><van-icon name="good-job"  color="#2d8ae9" /></view> -->
+		</view>
+
+		
+		<view class="item-con-li" wx:for="{{pmdata.daikuanOrderNumber}}"   bindtap='dianzan' data-id="{{item.id}}"  data-types="3"  wx:for-index="index">
+			<view class="w10">{{index+1}}</view>
+			<view class="names"><image src="{{item.avatar}}" mode="widthFix"></image>{{item.nickname}}
+			<van-icon name="star" color="#ffd400" wx:if="{{item.isziyuan == 2}}" class="news-star" />
+			<van-icon name="good-job"  color="#2d8ae9" font-size="12px" class="good-job" />
+			</view>
+			<view>{{item.daikuanOrderNumber}}户</view>
+			<view class="w35">{{item.teamname}}</view>
+			
+		</view>
+		
+		
+		</view>
+		
+		
+		
+	</view>
+	
+	
+	
+	
+	
+</view>
+<!--  -->
+
+	
+	</view>
+
+</view>
+
+<view class="tab-bar">
+  <view class="tab-bar-border"></view>
+  <view class="tab-bar-item"  data-path="/pages/index/index" data-index="0" bindtap="switchTab">
+    <image  src="../../../images/icon_home.png" class=""></image>
+    <view style="">首页</view>
+  </view>
+  <view class="tab-bar-item active"  data-path="/pages/ranking/newranking/index" data-index="1" bindtap="switchTab">
+    <image src="../../../images/ranking_select.png" class=""></image>
+    <view style="">排行榜</view>
+  </view>
+  <view  class="tab-bar-item"  data-path="/pages/news/lists/index" data-index="2" bindtap="switchTab">
+    <image src="../../../images/icon_news.png" class=""></image>
+    <view style="">公享资讯</view>
+  </view>
+  <view  class="tab-bar-item"  data-path="/pages/member/index/index" data-index="3" bindtap="switchTab">
+    <image src="../../../images/icon_member.png" class=""></image>
+    <view style="">我的</view>
+  </view>
+</view>

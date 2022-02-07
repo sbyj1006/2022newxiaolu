@@ -1,0 +1,66 @@
+<!--pages/member/index/index.wxml-->
+<view>
+
+  <view class='userinfo' style="background: url('{{domain}}{{datas.topbanner_user.image}}'); background-size: cover;">
+
+    <!-- 第三季修正 -->
+	<view class="userinfo-left ">
+    <!-- <open-data type="userAvatarUrl" class="userinfo-avatar-new" ></open-data> -->
+	<image class='userinfo-avatar-new' src='../../../images/usertx.jpg' mode="widthFix"></image>
+	</view>
+	<view class="userinfo-right ">
+    <view class="info-li"><image src="../../../images/04-9.png" mode="widthFix"></image> {{userInfo.nickname}}</view>
+	 <view class="info-li"><image src="../../../images/04-10.png" mode="widthFix"></image> {{userInfo.teamname}}</view>
+	  <view class="info-li"><image src="../../../images/04-11.png" mode="widthFix"></image> {{userInfo.zhihangname}}</view>
+	</view>
+    <view class="uservip">
+    <view  wx:for="{{vips}}" wx:key="{{item.id}}" class="vipu" bindtap="Gotourl" data-url="../vips/index" data-vip-id="{{item.id}}">
+      <image src="{{domain}}{{item.image}}" mode="widthFix">
+    </image>
+  </view>
+	
+	</view>
+
+  
+  <view class="userinfo-grzx" data-url="/pages/member/upinfo/add" bindtap='Gotourl'>
+	  <image src="../../../images/gerenzx.png" mode="widthFix"></image> 个人中心
+  </view>
+  
+  
+  </view>
+
+
+
+
+
+<view class="list-page">
+	
+	<view class="view-item-tit">申报审核列表</view>
+	
+	
+<view class="mylist">
+	
+	
+    <view class="blocks"  wx:for="{{listdatas}}"  wx:for-index="index" >
+        <view class="left_yjjx">
+           <text>客户号：{{item.client_id}}</text> 	<text style="padding-left: 10px;" wx:if="{{item.client_name}}">{{item.client_name}}</text>
+        </view>
+	
+        <view class="client_type">{{item.username}}-{{item.client_type_name}}-{{item.typename}}
+		
+		</view>
+		
+
+        <view class="time">{{item.newaddtime}}</view>
+		
+		<view class="shenhei" bindtap="shenhei" data-shtypes='1' data-id="{{item.id}}">通过</view>
+		<view class="shenheib" bindtap="shenhei" data-shtypes='2' data-id="{{item.id}}">不通过</view>
+    </view>	
+
+
+    
+  </view>
+  
+  </view>
+  
+</view>

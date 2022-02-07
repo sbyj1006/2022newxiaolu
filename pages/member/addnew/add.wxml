@@ -1,0 +1,67 @@
+<!--pages/myform/freesj/add.wxml-->
+
+
+
+<view class='parent'>
+<view class="formtita">
+	
+	新增客户申报
+	
+</view>
+
+<van-cell-group>
+  <van-field  
+  label="客 户 号" class='bor-bot'
+    model:value="{{ client_id }}"
+    placeholder="请输入客户号:如:001111,"
+    border="{{ false }}" size="12px"
+  />
+</van-cell-group>
+
+<van-cell-group>
+  <van-field  
+  label="客户姓名" class='bor-bot'
+    model:value="{{ client_name }}"
+    placeholder="请输入客户姓名,"
+    border="{{ false }}" size="12px"
+  />
+</van-cell-group>
+
+
+<view class="view-rowb">
+<van-cell title="开户日期" is-link bind:click="showPopupt" />
+<view class="teat-plac">{{addtime}}</view>
+</view>
+<van-popup show="{{ showt }}" bind:close="onCloset"  round
+  position="bottom"
+  custom-style="height: 40%">
+
+<van-datetime-picker
+  type="date"
+  value="{{ currentDate }}"
+  bind:confirm="onInput"
+  min-date="{{ minDate }}"
+  formatter="{{ formatter }}"
+/>
+</van-popup>
+
+
+
+<view class="view-rowb">
+<van-cell title="客户类型" is-link bind:click="showPopup" />
+<view class="teat-plac">{{client_type_name}}</view>
+</view>
+<van-popup show="{{ show }}" bind:close="onClose"  round
+  position="bottom"
+  custom-style="height: 40%">
+	
+	<van-picker columns="{{ columns }}"  bind:change="onChange"  show-toolbar
+	  title="标题"  bind:cancel="onCancel"
+	  bind:confirm="onConfirm" />
+	
+</van-popup>
+
+
+<view class="mybtn" bindtap='submit' > 立即提交 </view>
+
+</view>

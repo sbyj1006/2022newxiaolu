@@ -1,0 +1,129 @@
+<!--index.wxml-->
+<view class="pagetop">
+	<view class="pagetopimg">
+		<image src="{{domain}}{{datas.topbanner.image}}" mode="widthFix"></image>
+	</view>
+</view>
+<view class="container" style="background: url({{domain}}{{datas.indexbj.image}}); background-size: cover;">
+
+
+<view class="page-con">
+
+<view class="view-item">
+	<view class="view-item-tit">新增客户排行榜</view>
+	
+	<view class="view-item-con">
+		<view class="item-con-t">
+			<view class="w10">排名</view>
+			<view class="names">姓名</view>
+			<view>开户数</view>
+			<view class="w30 teamst">参赛队伍</view>
+			<view class="item-dz"><van-icon name="good-job"  color="#ffffff" /></view>
+		</view>
+		
+		<view class="item-con-li" wx:for="{{pmdata.allOrderNumber}}"  wx:for-index="index">
+			<view class="w10">{{index+1}}</view>
+			<view class="names" bindtap='dianzan' data-id="{{item.id}}" data-types="1"><image src="{{item.avatar}}" mode="widthFix"></image>{{item.nickname}}
+			<van-icon name="star" color="#ffd400" wx:if="{{item.isziyuan == 2}}" class="news-star" />
+			<van-icon name="good-job"  color="#2d8ae9" font-size="12px" class="good-job" />
+			</view>
+			<view>{{item.allOrderNumber}}户</view>
+			<view class="w30 teams">{{item.teamname}}</view>
+			<view class="item-dz">
+		<image src="{{dianzhan.avatarUrl}}" wx:for="{{item.dianzan}}" wx:for-item="dianzhan" mode="widthFix"></image>
+					
+				</view>
+		</view>
+
+		
+		
+		
+		
+		
+		
+	</view>
+	
+</view>
+<!--  -->
+<view class="view-item">
+	<view class="view-item-tit">收单客户排行榜</view>
+	
+	<view class="view-item-con">
+		<view class="item-con-t">
+			<view class="w10">排名</view>
+			<view class="names">姓名</view>
+			<view>开户数</view>
+			<view class="w30 teamst">参赛队伍</view>
+			<view class="item-dz"><van-icon name="good-job"  color="#ffffff" /></view>
+		</view>
+		
+		
+		<view class="item-con-li" wx:for="{{pmdata.shoudanOrderNumber}}"  wx:for-index="index">
+			<view class="w10">{{index+1}}</view>
+			<view class="names" bindtap='dianzan' data-id="{{item.id}}" data-types="2"><image src="{{item.avatar}}" mode="widthFix"></image>
+			{{item.nickname}}
+			<van-icon name="star" color="#ffd400" wx:if="{{item.isziyuan == 2}}" class="news-star" />
+			<van-icon name="good-job"  color="#2d8ae9" font-size="12px" class="good-job" />
+			</view>
+			<view>{{item.shoudanOrderNumber}}户</view>
+			<view class="w30 teams">{{item.teamname}}</view>
+			<view class="item-dz">
+			<image src="{{dianzhan.avatarUrl}}" wx:for="{{item.dianzan}}" wx:for-item="dianzhan" mode="widthFix"></image>
+						
+				</view>
+		</view>
+
+		
+		
+		
+		
+		
+		
+	</view>
+	
+</view>
+<!--  -->
+<view class="view-item">
+	<view class="view-item-tit">贷款客户排行榜</view>
+	
+	<view class="view-item-con">
+		<view class="item-con-t">
+			<view class="w10">排名</view>
+			<view class="names">姓名</view>
+			<view>开户数</view>
+			<view class="w30 teamst">参赛队伍</view>
+			<view class="item-dz"><van-icon name="good-job"  color="#ffffff" /></view>
+		</view>
+		
+		
+		<view class="item-con-li" wx:for="{{pmdata.daikuanOrderNumber}}"  wx:for-index="index">
+			<view class="w10">{{index+1}}</view>
+			<view class="names" bindtap='dianzan' data-id="{{item.id}}" data-types="3">
+				<image src="{{item.avatar}}" mode="widthFix"></image>
+			{{item.nickname}}
+			<van-icon name="star" color="#ffd400" wx:if="{{item.isziyuan == 2}}" class="news-star" />
+			<van-icon name="good-job"  color="#2d8ae9" font-size="12px" class="good-job" />
+			</view>
+			<view>{{item.daikuanOrderNumber}}户</view>
+			<view class="w30 teams">{{item.teamname}}</view>
+			<view class="item-dz">
+				<image src="{{dianzhan.avatarUrl}}" wx:for="{{item.dianzan}}" wx:for-item="dianzhan" mode="widthFix"></image>
+			
+				</view>
+		</view>
+
+		
+		
+		
+		
+	</view>
+	
+</view>
+<!--  -->
+
+
+	
+	</view>
+
+</view>
+
